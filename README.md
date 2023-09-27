@@ -4,9 +4,13 @@
 
 ## Development
 
-- `npm run dev`
+- Install the dependencies using `npm ci`
+- Setup the git hooks using `npm run husky-prepare`
+- Start the development server using `npm run dev`
+- prettier: `npm run prettier` and `npm run prettier-fix`
 
 ## Production
 
+- Install: `npm ci`
 - build: `npm run build`
 - `npm run start`
