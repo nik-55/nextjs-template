@@ -1,0 +1,23 @@
+name: prettier
+
+# This action works with pull requests and pushes
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: check prettiness
+        uses: creyD/prettier_action@v4.3
+        with:
+          prettier_options: --check .
